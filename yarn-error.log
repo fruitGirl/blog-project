@@ -1,0 +1,50 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn
+
+PATH: 
+  /usr/local/opt/openssl/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/usr/local/opt/openssl/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/Users/artist/go/bin:/Users/artist/.local/bin:/usr/local/bin:/usr/local/go/bin:/Users/artist/go/bin:/Users/artist/.local/bin
+
+Yarn version: 
+  1.21.1
+
+Node version: 
+  18.12.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/artist/qm/blog/package.json: Unexpected token } in JSON at position 369
+      at JSON.parse (<anonymous>)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "myBogger",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+      "dev": "vuepress dev docs",
+      "build": "vuepress build docs",
+      "deploy-gh": "GH=1 yarn build && bash scripts/deploy-gh.sh"
+    },
+    "devDependencies": {
+      "@vuepress/theme-blog": "^2.3.3",
+      "vuepress": "^1.9.9",
+      "vuepress-plugin-ribbon": "^1.1.6",
+    },
+    "dependencies": {
+      "vuepress-plugin-cursor-effects": "^1.1.6",
+      "vuepress-theme-reco": "^1.6.17"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

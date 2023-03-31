@@ -1,5 +1,5 @@
 module.exports = {
-    title: "困芽芽",
+    title: "困芽芽de空间",
     description: "欢迎来到我的博客",
     base: "/blog/",
     theme: 'reco',
@@ -8,20 +8,21 @@ module.exports = {
       lineNumbers: true, //代码显示行号
     },
     head: [
+      // 手机适配
       ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }]
     ],
     themeConfig: {
       type: "blog",
-      logo: "/avatar.png",
-      authorAvatar: '/avatar.png',
+      logo: "/avatar.png", // logo图片
+      authorAvatar: '/avatar.png', // 头像
       author: '困芽芽',
       subSidebar: 'auto',
-      search: true,
+      search: true, // 搜索配置
       nav: [
         {text: "首页", link: "/", icon: 'reco-date'},
         {text: 'Github',link: "https://github.com/fruitGirl"}
       ],
-      sidebar: {
+      sidebar: { // 侧边栏
         "/css/": [
             {
               title: "css", // 必要的
@@ -75,6 +76,7 @@ module.exports = {
             },
           ],
       },
+      // 博客设置
       blogConfig: {
             category: {
                 location: 2,     // 在导航栏菜单中所占的位置，默认2
@@ -88,18 +90,41 @@ module.exports = {
                 { icon: 'reco-github', link: 'https://github.com/fruitGirl' },
                 { icon: 'reco-juejin', link: 'https://juejin.cn/user/325111173876509/posts' }
             ]
+        },
+        valineConfig: {
+          appId: 'uQUH4wH4m1c86Mms1ZPOQnNS-gzGzoHsz',// your appId
+          appKey: 'MVtA6E7KCrvQY77h33Jr5XH9', // your appKey
         }
         
     },
     plugins: [ // 插件
         [
-            "vuepress-plugin-cursor-effects",
+            "vuepress-plugin-cursor-effects", // 鼠标点击特效
             {
                 size: 2,                    // size of the particle, default: 2
                 shape: 'circle',  // shape of the particle, default: 'star'
                 zIndex: 999999999           // z-index property of the canvas, default: 999999999
             },
-        ]
+        ],
+        [ // 彩带
+          'ribbon',
+          {
+             size: 90, // width of the ribbon, default: 90
+             opacity: 0.8, // opacity of the ribbon, default: 0.3
+             zIndex: -1, // z-index property of the background, default: -1
+          },
+       ],
+       ['@vuepress-reco/vuepress-plugin-kan-ban-niang',{ // 看板娘
+        theme: ["wanko"],
+        clean: false,
+        info: 'https://github.com/fruitGirl',
+        messages: {
+          welcome: '欢迎来到困芽芽的小空间',
+          home: '心里的花，我想要带你回家',
+          theme: '好吧，希望你能喜欢我的其他小伙伴。',
+          close: '你可以选择关闭我哦'
+        }
+      }],
       ],  
     
 }

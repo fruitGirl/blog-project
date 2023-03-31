@@ -9,8 +9,10 @@
     "deploy-gh": "GH=1 yarn build && bash scripts/deploy-gh.sh"
   },
   "devDependencies": {
+    "@vuepress-reco/vuepress-plugin-kan-ban-niang": "^1.0.5",
     "@vuepress/theme-blog": "^2.3.3",
-    "vuepress": "^1.9.9"
+    "vuepress": "^1.9.9",
+    "vuepress-plugin-ribbon": "^1.1.6"
   },
   "dependencies": {
     "vuepress-plugin-cursor-effects": "^1.1.6",
