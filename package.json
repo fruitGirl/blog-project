@@ -1,0 +1,19 @@
+{
+  "name": "myBogger",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "deploy-gh": "GH=1 yarn build && bash scripts/deploy-gh.sh"
+  },
+  "devDependencies": {
+    "@vuepress/theme-blog": "^2.3.3",
+    "vuepress": "^1.9.9"
+  },
+  "dependencies": {
+    "vuepress-plugin-cursor-effects": "^1.1.6",
+    "vuepress-theme-reco": "^1.6.17"
+  }
+}
