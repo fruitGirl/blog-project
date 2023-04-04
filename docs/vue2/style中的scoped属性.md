@@ -1,7 +1,7 @@
 ---
 title: style中的scoped属性
 author: qm
-date: '2018-8-26'
+date: '2018-08-26'
 categories:
  - vue2
 tags:

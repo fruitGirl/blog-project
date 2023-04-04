@@ -1,7 +1,7 @@
 ---
 title: 对delete操作符知道多少？
 author: qm
-date: '2023-3-24'
+date: '2023-03-24'
 categories:
  - javascript
 tags:

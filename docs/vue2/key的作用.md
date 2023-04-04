@@ -1,7 +1,7 @@
 ---
 title: key的作用
 author: qm
-date: '2019-8-26'
+date: '2019-08-26'
 categories:
  - vue2
 tags:

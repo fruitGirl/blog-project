@@ -1,7 +1,7 @@
 ---
 title: 如何使用webpack从零开始搭建一个vue项目？
 author: qm
-date: '2023-3-2'
+date: '2023-03-02'
 categories:
  - vue3
 tags:

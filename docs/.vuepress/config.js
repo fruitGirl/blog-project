@@ -28,9 +28,11 @@ module.exports = {
               title: "css", // 必要的
               sidebarDepth: 2, // 可选的, 默认值是 1
               children: [
-                "重排重绘.md",
-                "弹性盒子布局-Flex.md",
-                "flex实战篇-骰子.md",
+                "重排重绘",
+                "弹性盒子布局-Flex",
+                "flex实战篇-骰子",
+                "背景图片全屏铺满自适应",
+                "css省略号显示"
               ],
             },
           ],
@@ -39,11 +41,13 @@ module.exports = {
               title: "javascript", // 必要的
               sidebarDepth: 2, // 可选的, 默认值是 2
               children: [
-                "[设计模式]手写一个发布订阅模式.md",
-                "对delete操作符知道多少？.md",
-                "数据类型.md",
-                "强制类型转换.md",
-                "LHS和RHS.md",
+                "[设计模式]手写一个发布订阅模式",
+                "对delete操作符知道多少？",
+                "数据类型",
+                "强制类型转换",
+                "LHS和RHS",
+                "执行上下文和执行栈",
+                "设计模式",
               ],
             },
           ],
@@ -52,8 +56,8 @@ module.exports = {
               title: "vue2", // 必要的
               sidebarDepth: 2, // 可选的, 默认值是 1
               children: [
-                "style中的scoped属性.md",
-                "key的作用.md",
+                "style中的scoped属性",
+                "key的作用",
               ]
             }
           ],
@@ -62,7 +66,7 @@ module.exports = {
               title: "vue3", // 必要的
               sidebarDepth: 2, // 可选的, 默认值是 1
               children: [
-                "如何使用webpack从零开始搭建一个vue项目？.md"
+                "如何使用webpack从零开始搭建一个vue项目？"
               ],
             },
           ],
@@ -71,7 +75,26 @@ module.exports = {
               title: "chart", // 必要的
               sidebarDepth: 2, // 可选的, 默认值是 1
               children: [
-                "bizChart踩坑.md"
+                "bizChart踩坑"
+              ],
+            },
+          ],
+          "/tool/": [
+            {
+              title: "tool", // 必要的
+              sidebarDepth: 2, // 可选的, 默认值是 1
+              children: [
+                "nvm踩坑篇"
+              ],
+            },
+          ],
+          "/blog/": [
+            {
+              title: "blog", // 必要的
+              sidebarDepth: 2, // 可选的, 默认值是 1
+              children: [
+                "如何用VuePress 搭建个人博客？",
+                "部署个人博客到Github Page上"
               ],
             },
           ],

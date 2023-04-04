@@ -1,7 +1,7 @@
 ---
 title: bizChart踩坑
 author: qm
-date: '2019-6-26'
+date: '2019-06-26'
 categories:
  - chart
 tags:
