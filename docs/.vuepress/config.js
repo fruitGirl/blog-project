@@ -97,7 +97,16 @@ module.exports = {
                 "部署个人博客到Github Page上"
               ],
             },
-          ],
+        ],
+        "/vite/": [
+          {
+            title: "vite", // 必要的
+            sidebarDepth: 2, // 可选的, 默认值是 1
+            children: [
+              "解决低版本系统白屏问题"
+            ],
+          },
+        ],
       },
       // 博客设置
       blogConfig: {

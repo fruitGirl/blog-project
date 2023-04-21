@@ -1,24 +1,23 @@
 ---
 title: 部署个人博客到Github Page上
 author: qm
-date: '2023-04-03'
+date: "2023-04-03"
 categories:
- - blog
+  - blog
 tags:
- - blog
+  - blog
 ---
 
 **前言：**
-上一篇文章我们本地已经搭建好了个人博客，我想部署到免费的Github Page上，该如何操作呢？
+上一篇文章我们本地已经搭建好了个人博客，我想部署到免费的 Github Page 上，该如何操作呢？
 
+1.我们现在 Github 上创建一个新的仓库
 
-1.我们现在Github上创建一个新的仓库
-
-- 我们先找到Repositories上的new按钮,点击
+- 我们先找到 Repositories 上的 new 按钮,点击
 
 ![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f761f0d43a5a41bbbe71b3bb6b4cc727~tplv-k3u1fbpfcp-watermark.image?)
-- 然后填入自己的博客名字，最后点击创建
 
+- 然后填入自己的博客名字，最后点击创建
 
 ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/22bd613b351640538f34ac94967685c6~tplv-k3u1fbpfcp-watermark.image?)
 这样我们就成功的创建了一个新的仓库
@@ -27,7 +26,8 @@ tags:
 
 2.我们在项目中配置代码
 
-我们首先要在config.js中配置一个base路径
+我们首先要在 config.js 中配置一个 base 路径
+
 ```
 module.exports = {
       // 路径名为 "/<REPO>/"
@@ -35,7 +35,9 @@ module.exports = {
       //...
 }
 ```
-最终的config.js如下所示
+
+最终的 config.js 如下所示
+
 ```
 module.exports = {
     title: 'person blog',
@@ -81,8 +83,8 @@ module.exports = {
                 { icon: 'reco-juejin', link: 'https://juejin.cn/user/325111173876509/posts' }
             ]
         },
-        
-    
+
+
     },
     plugins: [ // 插件
         [
@@ -112,12 +114,13 @@ module.exports = {
           close: '你可以选择关闭我哦'
         }
       }],
-      ],  
-    
+      ],
+
   }
 ```
 
-我们需要在根目录（blog）下创建一个scripts文件夹，下面创建一个deploy-gh.sh脚本
+我们需要在根目录（blog）下创建一个 scripts 文件夹，下面创建一个 deploy-gh.sh 脚本
+
 ```
 #!/usr/bin/env sh
 
@@ -148,24 +151,19 @@ git push -f git@github.com:fruitGirl/person-blog.git master:gh-pages
 
 cd -
 ```
-为了发布上去方便，我们在package.json中配置一下
+
+为了发布上去方便，我们在 package.json 中配置一下
+
 ```
 "scripts": {
     "deploy-gh": "GH=1 yarn build && bash scripts/deploy-gh.sh"
   },
 ```
 
-执行yarn deploy-gh部署到Github Page上
-
+执行 yarn deploy-gh 部署到 Github Page 上
 
 ![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e1f148bb4c654d1798c0ad58bada9b15~tplv-k3u1fbpfcp-watermark.image?)
 
-找到Settings->Pages查看博客地址就可以了
+找到 Settings->Pages 查看博客地址就可以了
 
 ![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9a16aef95b004203937e439532c79fe5~tplv-k3u1fbpfcp-watermark.image?)
-
-
-
-
-
-
